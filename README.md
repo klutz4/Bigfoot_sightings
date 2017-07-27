@@ -8,11 +8,11 @@ There are two data sets you can choose to work from, one about UFO sightings and
 
 ### UFO Sightings
 
-A data set of UFO sighting reports was collected from [The National UFO Reporting Center Online Database](http://www.nuforc.org/webreports.html); you can see an example report [here](http://www.nuforc.org/webreports/133/S133931.html). The data, downloadable as a zipped `json` file [here](https://s3.amazonaws.com/ufodatafordarren/ufodata.json.zip), contains the URL, raw HTML for that URL, and the time it was scraped for each report in the database.
+A data set of UFO sighting reports was collected from [The National UFO Reporting Center Online Database](http://www.nuforc.org/webreports.html); you can see an example report [here](http://www.nuforc.org/webreports/133/S133931.html). The data, downloadable as a zipped `json` file [here](https://s3.amazonaws.com/ufodatafordarren/ufodata.json.zip), contains the URL, raw HTML for that URL, and the time it was scraped for each report in the database along with the remnants of a database id.
 
 ### Bigfoot Sightings
 
-A data set of bigfoot sighting reports was collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/); you can see an example report [here](http://www.bfro.net/GDB/show_report.asp?id=13038). The data, downloadable as a zipped `json` file [here](https://s3.amazonaws.com/ufodatafordarren/bigfoot_data.json.zip), contains the URL, raw HTML for that URL, and the time it was scraped for each report in the database.
+A data set of bigfoot sighting reports was collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/); you can see an example report [here](http://www.bfro.net/GDB/show_report.asp?id=13038). The data, downloadable as a zipped `json` file [here](https://s3.amazonaws.com/ufodatafordarren/bigfoot_data.json.zip), contains the URL, raw HTML for that URL, and the time it was scraped for each report in the database along with the remnants of a database id.
 
 ## The Problem
 
