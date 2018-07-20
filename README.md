@@ -60,11 +60,12 @@ Unlimited Clusters
 
 Limited to 5 Clusters
 
+
 | Cluster     |        |   |   |   |   |   |   |   |   | |   |
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
 |1| tracks| prints| snow| track| print| found| inches| footprints| foot| trail |
 |2| stan| courtney| illinois| see| collected| giving| audio| special| recording | com |
-| 3| florida| expedition| michigan| 2013| 2012| creature| north| investigator| woods| expeditions|
+|3| florida| expedition| michigan| 2013| 2012| creature| north| investigator| woods| expeditions|
 |4| sound| night| lake| camp| sounds| tent| one| us| back| loud|
 |5| creature| back| sighting| said| see| one| feet| around| could| hair|
 
@@ -73,10 +74,11 @@ Limited to 5 Clusters
 
 #### Top Words Per Topic: NMF
 
+
 | Cluster     |        |   |   |   |   |   |   |   |   | |   |
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
 |1| back | one |see |time |around| feet| got |looked |us| |something |
 |2 |heard |sound |night |area |sounds |time |woods |around |loud |camp|
-|3| witness |animal|investigator|sighting|creature|woods|feet|hair|area|witnesses|
-| 4| road|creature|side|sighting|car|county|time|area|sightings|driving|
+|3| witness |animal|investigator|sighting|creature|woods|feet|hair|area|witnesses
+| 4| road|creature|side|sighting|car|county|time|area|sightings|driving
 | 5| area|tracks|found|large|trail|one|deer|creek|tree|lake|
