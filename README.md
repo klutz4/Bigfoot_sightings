@@ -1,16 +1,19 @@
-# Big Foot Sightings
+# An analysis of 'Squatchin' Reports
 ## Unsupervised Learning Case Study
 
 ![Alt Text](https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif)
 ### Data
 
-Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
+The data contained Bigfoot sighting reports that were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
 
-### Problem
-* Get the data into a usable form
-* Use unsupervised learning to discover useful information about Bigfoot sightings
+### Goals
+* Obtain the data from the reporting website and transform it into a usable form
+* Use unsupervised learning to reveal interesting information about Bigfoot sightings
 
 ### Web Scraping
+
+The data was read in as a .json file and was transformed into a list, where
+each element contained the content of each report:
 
 ```python
 def get_content():
@@ -32,6 +35,9 @@ def get_content():
     return content_list
 ```
 
+After web-scraping, an NLP analysis was conducted on the dataset (report content)
+in order to make an attempt at clustering data, and revealing any latent features
+
 ### Findings
 #### What state has the most Bigfoot sightings?
 
@@ -45,10 +51,14 @@ def get_content():
 
 <img src= 'images/Year.png'>
 
+
+### Clustering Attempts
+
 #### Top Words: Kmeans
 
+(A Porter stemmer was used to tokenize content first)
 
-Unlimited Clusters
+No Cluster limit set
 
 | Cluster     |        |   |   |   |   |   |   |   |   |
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
@@ -62,7 +72,7 @@ Unlimited Clusters
 |8| camp| tent| night| lake| camping| us| around| fire| back| sound|
 
 
-Limited to 5 Clusters
+5 Cluster Limit
 
 
 | Cluster     |        |   |   |   |   |   |   |   |   |   
@@ -79,10 +89,37 @@ Limited to 5 Clusters
 #### Top Words Per Topic: NMF
 
 
-| Cluster     |        |   |   |   |   |   |   |   |   | 
+| Cluster     |        |   |   |   |   |   |   |   |   |
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
 |1| back | one |see |time |around| feet| got |looked |us| |something |
 |2 |heard |sound |night |area |sounds |time |woods |around |loud |camp|
 |3| witness |animal|investigator|sighting|creature|woods|feet|hair|area|witnesses
 | 4| road|creature|side|sighting|car|county|time|area|sightings|driving
 | 5| area|tracks|found|large|trail|one|deer|creek|tree|lake|
+
+After each attempt at rendering clusters, we continually added to our list
+of stop words that were utilized in the NLP, vectorization process. Common,
+non-descriptive words were added to the last and the vectorization was re-run
+to try and improve clustering results.
+
+### Hierarchal Clustering
+
+With little luck using Kmeans and NMF, we attempted to use hierarchal clustering
+to see if there is literally any way to cluster report content (following NLP)
+
+['Clustering based on furthest distances'](https://github.com/jackiekirschner/dsi-unsupervised-case-study/blob/master/images/dendrogram_complete.png)
+
+['Clustering based on Average distance'](https://github.com/jackiekirschner/dsi-unsupervised-case-study/blob/master/images/dendrogram_average.png)
+
+### Future Work
+
+- Develop more effective ways to split pertinent data out of HTML sources
+- Improve clustering models by optimizing parameters such as max_features, number
+of clusters and so on
+- Continue the iterative process of removing words that should be added to stop
+words
+
+- Purchase necessary squatchin' gear, and get out hunting
+
+
+### Happy Squathin' Everyone 
