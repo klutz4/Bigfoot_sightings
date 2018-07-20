@@ -3,7 +3,7 @@
 
 ### Data
 
-Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/)
+Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
 
 ### Web Scraping
 
@@ -28,5 +28,5 @@ def get_content():
 ```
 
 ### Findings
-
 What state has the most UFO/bigfoot sightings?
+<img src= 'images/states.png'>
