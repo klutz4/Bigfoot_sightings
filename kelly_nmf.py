@@ -44,3 +44,22 @@ if __name__ == '__main__':
         doc1 = content[idx]
         top_three = top_three_topics_per_doc(doc1,idx,content,W)
         print(idx,top_three)
+
+#top words per topic
+# {0: ['back', 'one', 'see', 'time', 'around', 'feet', 'got', 'looked', 'us', 'something'],
+# 1: ['heard', 'sound', 'night', 'area', 'sounds', 'time', 'woods', 'around', 'loud', 'camp'],
+# 2: ['witness', 'animal', 'investigator', 'sighting', 'creature', 'woods', 'feet', 'hair', 'area', 'witnesses'],
+# 3: ['road', 'creature', 'side', 'sighting', 'car', 'county', 'time', 'area', 'sightings', 'driving'],
+# 4: ['area', 'tracks', 'found', 'large', 'trail', 'one', 'deer', 'creek', 'tree', 'lake']}
+
+# top three topics per report examples
+# 3962 [3 0 2]
+# 3619 [0 2 3]
+# 1018 [2 3 4]
+# 2967 [1 0 4]
+# 4500 [1 3 4]
+# 734 [3 4 2]
+# 55 [2 1 3]
+# 1025 [3 4 2]
+# 3675 [2 0 1]
+# 3932 [2 3 0]
