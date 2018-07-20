@@ -21,6 +21,7 @@ def get_content():
 
         tables = pd.read_html(data.iloc[i,1])
         content = tables[3][0][0]
+        content = unidecode(content)
         content_list.append(content)
 
     return content_list
