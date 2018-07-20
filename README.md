@@ -1,6 +1,10 @@
 # Big Foot Sightings
 ## Unsupervised Learning Case Study
 
+### Problem
+* Get the data into a usable form
+* Use unsupervised learning to discover useful information about Big Foot sightings
+
 ### Data
 
 Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
@@ -28,5 +32,10 @@ def get_content():
 ```
 
 ### Findings
-What state has the most UFO/bigfoot sightings?
+What state has the most Big Foot sightings?
+
 <img src= 'images/states.png'>
+
+What season is Big Foot most often seen?
+
+<img src= 'images/season.png'>
