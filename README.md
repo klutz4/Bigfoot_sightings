@@ -61,7 +61,7 @@ Unlimited Clusters
 Limited to 5 Clusters
 
 
-| Cluster     |        |   |   |   |   |   |   |   |   | |  
+| Cluster     |        |   |   |   |   |   |   |   |   |   
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
 |1| tracks| prints| snow| track| print| found| inches| footprints| foot| trail |
 |2| stan| courtney| illinois| see| collected| giving| audio| special| recording | com |
