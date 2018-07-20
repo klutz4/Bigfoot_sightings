@@ -7,7 +7,7 @@ Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot
 
 ### Problem
 * Get the data into a usable form
-* Use unsupervised learning to discover useful information about Big Foot sightings
+* Use unsupervised learning to discover useful information about Bigfoot sightings
 
 ### Web Scraping
 
@@ -32,10 +32,10 @@ def get_content():
 ```
 
 ### Findings
-What state has the most Big Foot sightings?
+What state has the most Bigfoot sightings?
 
 <img src= 'images/states.png'>
 
-What season is Big Foot most often seen?
+What season is Bigfoot most often seen?
 
 <img src= 'images/season.png'>
