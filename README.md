@@ -84,7 +84,7 @@ No Cluster limit set
 |5| creature| back| sighting| said| see| one| feet| around| could| hair|
 
 
-[Very important link](http://stancourtney.com/)
+[For more information on Squatchin: The one and only Stan Courtney](http://stancourtney.com/)
 
 #### Top Words Per Topic: NMF
 
@@ -107,9 +107,9 @@ to try and improve clustering results.
 With little luck using Kmeans and NMF, we attempted to use hierarchal clustering
 to see if there is literally any way to cluster report content (following NLP)
 
-['Clustering based on furthest distances'](https://github.com/jackiekirschner/dsi-unsupervised-case-study/blob/master/images/dendrogram_complete.png)
+<img src= 'images/dendrogram_complete.png' >
 
-['Clustering based on Average distance'](https://github.com/jackiekirschner/dsi-unsupervised-case-study/blob/master/images/dendrogram_average.png)
+<img src= 'images/dendrogram_average.png' >
 
 ### Future Work
 
@@ -122,4 +122,4 @@ words
 - Purchase necessary squatchin' gear, and get out hunting
 
 
-### Happy Squathin' Everyone 
+### Happy 'Squatchin' Y'all
