@@ -23,7 +23,7 @@ if __name__ == '__main__':
     content = get_content()
 
     stopwords = set(stopwords.words('english'))
-    for word in ['also','would','could','saw','report','bfro','like','said','YEAR', 'SEASON', 'MONTH', 'STATE', 'COUNTY', 'LOCATION DETAILS', 'NEAREST TOWN', 'NEAREST ROAD', 'OBSERVED', 'ALSO NOTICED', 'OTHER WITNESSES', 'OTHER STORIES', 'TIME AND CONDITIONS', 'ENVIRONMENT']:
+    for word in ['also','would','could','saw','report','bfro','like','said','YEAR', 'SEASON', 'MONTH', 'STATE', 'COUNTY', 'LOCATION','DETAILS', 'TOWN', 'NEAREST','ROAD', 'OBSERVED', 'NOTICED', 'OTHER','WITNESSES', 'STORIES', 'TIME', 'CONDITIONS', 'ENVIRONMENT']:
         stopwords.add(word)
     vectorizer = CountVectorizer(stop_words=stopwords)
     td_mat = vectorizer.fit_transform(content)
@@ -46,8 +46,8 @@ if __name__ == '__main__':
         print(idx,top_three)
 
 #top words per topic
- # {0: ['back', 'see', 'one', 'creature', 'time', 'feet', 'looked', 'around', 'hair', 'something'],
- # 1: ['road', 'creature', 'side', 'sighting', 'car', 'driving', 'see', 'time', 'highway', 'feet'],
- # 2: ['woods', 'investigator', 'expedition', 'county', 'witnesses', 'year', 'sightings', 'net', 'near', 'animal'],
- # 3: ['night', 'us', 'sound', 'lake', 'camp', 'time', 'one', 'back', 'around', 'sounds'],
- # 4: ['tracks', 'found', 'snow', 'track', 'one', 'trail', 'prints', 'foot', 'inches', 'large']}
+# {0: ['back', 'see', 'one', 'creature', 'time', 'feet', 'looked', 'around', 'hair', 'something'],
+# 1: ['road', 'creature', 'side', 'sighting', 'car', 'driving', 'see', 'time', 'highway', 'feet'],
+# 2: ['woods', 'investigator', 'expedition', 'county', 'witnesses', 'year', 'sightings', 'net', 'near', 'animal'],
+# 3: ['night', 'us', 'sound', 'lake', 'camp', 'time', 'one', 'back', 'around', 'sounds'],
+# 4: ['tracks', 'found', 'snow', 'track', 'one', 'trail', 'prints', 'foot', 'inches', 'large']}
