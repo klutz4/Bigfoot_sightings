@@ -1,5 +1,10 @@
 import json
 from bs4 import BeautifulSoup
+import pandas as pd
+import lxml.html as LH
+import requests
+from io import StringIO
+
 
 import json
 
@@ -9,12 +14,39 @@ with open('bigfoot_data.json') as f:
         reports.append(json.loads(i))
 
 
-soup = BeautifulSoup(reports[0]['html'], 'html.parser')
+content_list = []
+data = pd.read_json('bigfoot_data.json', lines='true',orient='records')
+for i in range(len(reports)):
+    soup = BeautifulSoup(reports[i]['html'], 'html.parser')
+
+    '''
+
+    data = []
+    table = soup.find('span', attrs={'class':'reportclassification'})
+    table_body = table.find('tbody')
+
+    rows = table_body.find_all('tr')
+    for row in rows:
+        cols = row.find_all('td')
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele])
+
+    '''
+
+    #soup = BeautifulSoup(data['html'])
+
+    tables = pd.read_html(data.iloc[i,1])
+    content = tables[3][0][0]
+    content_list.append(content)
 
 
-# print(soup.prettify())
+
+
+
 #
 # print(soup.title)
 # print(soup.title.text)
 #
-# soup.get_text()
+#print(soup.get_text())
+#print(table)
+#data = pd.read_html(table)
