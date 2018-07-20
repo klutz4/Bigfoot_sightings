@@ -1,13 +1,13 @@
 # Big Foot Sightings
 ## Unsupervised Learning Case Study
 
-### Problem
-* Get the data into a usable form
-* Use unsupervised learning to discover useful information about Big Foot sightings
-
 ### Data
 
 Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
+
+### Problem
+* Get the data into a usable form
+* Use unsupervised learning to discover useful information about Big Foot sightings
 
 ### Web Scraping
 
