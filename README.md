@@ -89,12 +89,12 @@ No Cluster limit set
 #### Top Words Per Topic: NMF
 
 
-| Cluster     |        |   |   |   |   |   |   |   |   |
+| Cluster     |        |   |   |   |   |   |   |   |   |  |
 | -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
 |1| back | one |see |time |around| feet| got |looked |us| |something |
 |2 |heard |sound |night |area |sounds |time |woods |around |loud |camp|
-|3| witness |animal|investigator|sighting|creature|woods|feet|hair|area|witnesses
-| 4| road|creature|side|sighting|car|county|time|area|sightings|driving
+|3| witness |animal|investigator|sighting|creature|woods|feet|hair|area|witnesses|
+| 4| road|creature|side|sighting|car|county|time|area|sightings|driving |
 | 5| area|tracks|found|large|trail|one|deer|creek|tree|lake|
 
 After each attempt at rendering clusters, we continually added to our list
@@ -107,8 +107,11 @@ to try and improve clustering results.
 With little luck using Kmeans and NMF, we attempted to use hierarchal clustering
 to see if there is literally any way to cluster report content (following NLP)
 
+##### Hierarchal clustering, complete linkage
 <img src= 'images/dendrogram_complete.png' >
 
+
+##### Hierarchal clustering, average linkage
 <img src= 'images/dendrogram_average.png' >
 
 ### Future Work
