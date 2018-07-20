@@ -41,6 +41,10 @@ def get_content():
 
 <img src= 'images/season.png'>
 
+### How often is Bigfoot seen every year?
+
+<img src= 'images/Year.png'>
+
 #### Top Words: Kmeans
 
 
