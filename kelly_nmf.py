@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.decomposition import NMF
 from sklearn.feature_extraction.text import CountVectorizer
 from rob import get_content
+from nltk.corpus import stopwords
 
 def get_top_words(H,data):
     top_words = {}
@@ -21,7 +22,10 @@ def top_three_topics_per_doc(doc, idx,data,W):
 if __name__ == '__main__':
     content = get_content()
 
-    vectorizer = CountVectorizer(stop_words='english')
+    stopwords = set(stopwords.words('english'))
+    for word in ['also','would','could','saw','report','bfro','like','said']:
+        stopwords.add(word)
+    vectorizer = CountVectorizer(stop_words=stopwords)
     td_mat = vectorizer.fit_transform(content)
     V = td_mat.toarray()
     feature_names = vectorizer.get_feature_names()
