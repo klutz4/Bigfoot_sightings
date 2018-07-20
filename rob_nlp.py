@@ -47,16 +47,18 @@ for i in new_content:
 
 stopwords =  stopwords.words('english')
 
-big_foot_sw = ['report','area','bfro','witness','saw','time','heard']
+big_foot_sw = ['report','area','bfro','witness','saw','time','heard','road','2007','2008','like','animal','sound'
+'location','town','details','observed','date','noticed','year','month','date']
 stopwords.extend(big_foot_sw)
 new = set(stopwords)
 
 
 #Vectorize
-vectorizer = TfidfVectorizer(stop_words=new)
+n_clusters = 5
+vectorizer = TfidfVectorizer(stop_words=new,max_features=1000)
 X = vectorizer.fit_transform(data)
 features = vectorizer.get_feature_names()
-kmeans = KMeans()
+kmeans = KMeans(n_clusters)
 kmeans.fit(X)
 top_centroids = kmeans.cluster_centers_.argsort()[:,-1:-11:-1]
 print("\n4) top features for each cluster with 1000 max features:")
@@ -64,3 +66,24 @@ for num, centroid in enumerate(top_centroids):
     print("%d: %s" % (num, ", ".join(features[i] for i in centroid)))
 
 #
+'''
+Unlimited Clusters
+
+0: sound, sounds, lake, scream, howl, loud, night, vocalizations, expedition, sounded
+1: tracks, prints, snow, track, print, found, inches, foot, footprints, trail
+2: creature, sighting, car, driving, highway, hair, side, tall, feet, said
+3: florida, expedition, north, creature, michigan, georgia, woods, investigator, 2009, 2013
+4: house, window, woods, back, night, dogs, one, around, said, door
+5: stan, courtney, illinois, see, collected, giving, audio, special, recording, com
+6: river, back, could, tree, see, us, one, would, woods, said
+7: camp, tent, night, lake, camping, us, around, fire, back, sound
+
+
+Limited to 5 Clusters
+
+0: tracks, prints, snow, track, print, found, inches, footprints, foot, trail
+1: stan, courtney, illinois, see, collected, giving, audio, special, recording, com
+2: florida, expedition, michigan, 2013, 2012, creature, north, investigator, woods, expeditions
+3: sound, night, lake, camp, sounds, tent, one, us, back, loud
+4: creature, back, sighting, said, see, one, feet, around, could, hair
+'''
