@@ -9,10 +9,10 @@ from scipy.spatial.distance import pdist, squareform
 from scipy.cluster.hierarchy import linkage, dendrogram
 import matplotlib.pyplot as plt
 
-content = get_content()
+# content = get_content()
 
-def cluster_text(data):
-    vectorizer = TfidfVectorizer(stop_words=stopwords.words('english'), max_df=0.5, min_df=0.1, lowercase=True,max_features=1000)
+def cluster_text(data,stopwords):
+    vectorizer = TfidfVectorizer(stop_words=stopwords, max_df=0.5, min_df=0.1, lowercase=True,max_features=100)
     tfidf_model = vectorizer.fit_transform(data)
 
     kmeans = KMeans(n_clusters=5).fit(tfidf_model)
@@ -28,10 +28,13 @@ def cluster_text(data):
         # print(names)
     return vectorizer, tfidf_model, kmeans
 
-vectorizer, tfidf_model, kmeans = cluster_text(content)
+stopwords = set(stopwords.words('english'))
+for word in ['also','would','could','saw','report','bfro','like','said','YEAR', 'SEASON', 'MONTH', 'STATE', 'COUNTY', 'LOCATION','DETAILS', 'TOWN', 'NEAREST','ROAD', 'OBSERVED', 'NOTICED', 'OTHER','WITNESSES', 'STORIES', 'TIME', 'CONDITIONS', 'ENVIRONMENT']:
+        stopwords.add(word)
+vectorizer, tfidf_model, kmeans = cluster_text(content, stopwords)
 sim = pdist(tfidf_model.toarray())
 sim_matrix = squareform(sim)
 hierarchies = linkage(sim,'average')
 dendro = dendrogram(hierarchies)
-plt.savefig('images/dendrogram_single.png')
+plt.savefig('images/dendrogram_average.png')
 plt.show()
