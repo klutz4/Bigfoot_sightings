@@ -42,6 +42,10 @@ for i in range(len(reports)):
 
 
 
+# for k, v in reports[0].items():
+#     print(f'{k}: {v} \n')
+
+soup = BeautifulSoup(reports[0]['html'], 'html.parser')
 
 #
 # print(soup.title)
