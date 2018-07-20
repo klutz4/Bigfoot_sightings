@@ -1,6 +1,7 @@
 # Big Foot Sightings
 ## Unsupervised Learning Case Study
 
+![Alt Text](https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif) 
 ### Data
 
 Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
