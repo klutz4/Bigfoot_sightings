@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import lxml.html as LH
 import requests
+from unidecode import unidecode
 from io import StringIO
 
 
