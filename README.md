@@ -1,7 +1,7 @@
 # Big Foot Sightings
 ## Unsupervised Learning Case Study
 
-![Alt Text](https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif) 
+![Alt Text](https://media.giphy.com/media/10jOyd7c2iGv1S/giphy.gif)
 ### Data
 
 Bigfoot sighting reports were collected from the [Geographic Database of Bigfoot / Sasquatch Sightings & Reports](http://www.bfro.net/gdb/).
@@ -33,10 +33,40 @@ def get_content():
 ```
 
 ### Findings
-What state has the most Bigfoot sightings?
+#### What state has the most Bigfoot sightings?
 
 <img src= 'images/states.png'>
 
-What season is Bigfoot most often seen?
+#### What season is Bigfoot most often seen?
 
 <img src= 'images/season.png'>
+
+#### Top Words: Kmeans
+
+
+Unlimited Clusters
+
+| Cluster     |        |   |   |   |   |   |   |   |   |
+| -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
+|1| sound| sounds| lake| scream| howl| loud| night| vocalizations| expedition| sounded |
+|2| tracks| prints| snow| track| print| found| inches| foot| footprints| trail |
+|3| creature| sighting| car| driving| highway| hair| side| tall| feet| said|
+|4| florida| expedition| north| creature| michigan| georgia| woods| investigator| 2009| 2013 |
+|5| house| window| woods| back| night| dogs| one| around| said| door |
+|6| stan| courtney| illinois| see| collected| giving| audio| special| recording| com|
+|7| river| back| could| tree| see| us| one| would| woods| said |
+|8| camp| tent| night| lake| camping| us| around| fire| back| sound|
+
+
+Limited to 5 Clusters
+
+| Cluster     |        |   |   |   |   |   |   |   |   | |   |
+| -------    |:---------:| -----:| -----:| -----:| -----:| -----:| -----:| -----:| -----:|
+|0| tracks| prints| snow| track| print| found| inches| footprints| foot| trail |
+|1| stan| courtney| illinois| see| collected| giving| audio| special| recording | com |
+| 2| florida| expedition| michigan| 2013| 2012| creature| north| investigator| woods| expeditions|
+|3| sound| night| lake| camp| sounds| tent| one| us| back| loud|
+|4| creature| back| sighting| said| see| one| feet| around| could| hair|
+
+
+[Very important link](http://stancourtney.com/)
