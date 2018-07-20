@@ -24,5 +24,3 @@ def get_content():
         content_list.append(content)
 
     return content_list
-
-content1 = get_content()
