@@ -107,8 +107,11 @@ to try and improve clustering results.
 With little luck using Kmeans and NMF, we attempted to use hierarchal clustering
 to see if there is literally any way to cluster report content (following NLP)
 
+##### Hierarchal clustering, complete linkage
 <img src= 'images/dendrogram_complete.png' >
 
+
+##### Hierarchal clustering, average linkage
 <img src= 'images/dendrogram_average.png' >
 
 ### Future Work
